@@ -33,7 +33,9 @@
                 <a class="navbar-brand" href="{% url 'home' %}">
                     <img src="/static/img/dap-logo-white.png" alt="logo" class="img-fluid img-responsive" />
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="ti-menu"></span>
                 </button>
 
@@ -43,7 +45,7 @@
                         <li><a href="#about" class="page-scroll">About</a></li>
                         <li><a href="#features" class="page-scroll">Features</a></li>
                         <li><a href="#screenshots" class="page-scroll">Screenshots</a></li>
-                        <li><a href="{% url 'blogs' %}">Blogs</a></li>
+                        <li><a href="https://blog.dap.ng">Blogs</a></li>
                         <li><a href="{% url 'contact' %}">Contact</a></li>
                         <li><a href="" class="btn btn-secondary p-2 mt-2 ml-4">LOG IN</a></li>
                     </ul>
@@ -58,7 +60,7 @@
         {% endblock %}
     </div>
 
-     <!--footer section start-->
+    <!--footer section start-->
     <!--when you want to remove subscribe newsletter container then you should remove .footer-with-newsletter class-->
     <footer class="footer-1 gradient-bg ptb-60 footer-with-newsletter">
         <!--subscribe newsletter start-->
@@ -71,9 +73,10 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-5">
-                    <form class="newsletter-form position-relative">
-                        <input type="text" class="input-newsletter form-control" placeholder="Enter your email" name="email" required="" autocomplete="off">
-                        <button type="submit" class="disabled"><i class="fas fa-paper-plane"></i></button>
+                    <form class="newsletter-form position-relative" id="submit__newsletter">
+                        <input type="text" class="input-newsletter form-control" placeholder="Enter your email"
+                            id="newsletter_email" name="email" required="" autocomplete="off">
+                        <button type="submit" class=""><i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
             </div>
@@ -87,12 +90,15 @@
                         <img src="/static/img/dap-logo-white.png" alt="logo" class="img-fluid">
                     </a>
                     <br>
-                    <p>Dynamically re-engineer high standards in functiona with alternative paradigms. Conveniently monetize resource maximizing initiatives.</p>
+                    <p>Dynamically re-engineer high standards in functiona with alternative paradigms. Conveniently
+                        monetize resource maximizing initiatives.</p>
                     <div class="list-inline social-list-default background-color social-hover-2 mt-2">
                         <li class="list-inline-item"><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
                         <li class="list-inline-item"><a class="youtube" href="#"><i class="fab fa-youtube"></i></a></li>
-                        <li class="list-inline-item"><a class="linkedin" href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li class="list-inline-item"><a class="dribbble" href="#"><i class="fab fa-dribbble"></i></a></li>
+                        <li class="list-inline-item"><a class="linkedin" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                        <li class="list-inline-item"><a class="dribbble" href="#"><i class="fab fa-dribbble"></i></a>
+                        </li>
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-8">
@@ -215,6 +221,34 @@
     <script src="/static/js/vendors/magnific-popup.min.js"></script>
     <script src="/static/js/vendors/validator.min.js"></script>
     <script src="/static/js/app.js"></script>
+
+    <script>
+        $("#submit__newsletter").on("submit", function (e) {
+            e.preventDefault();
+            var email = $("#newsletter_email").val();
+            $.ajax({
+                type: "post",
+                url: "https://dap.us6.list-manage.com/subscribe/post-json?u=3d73b766768efbd1365d5de2e&amp;id=4234921ce9&c=?",
+                data: {
+                    EMAIL: email,
+                    dataType: "json",
+                },
+                cache: false,
+                dataType: 'json',
+                contentType: "application/json; charset=utf-8",
+                error: function (err) { alert("Could not connect to the registration server. Please try again later."); },
+                success: function (data) {
+                    $("#newsletter_email").val("");
+                    if (data.result != "success") {
+                        alert("Sorry, we could not complete your subscription. Please try again.");
+                    } else {
+                        alert("Thanks for subscribing to our newsletter");
+                    }
+                }
+            });
+        });
+    </script>
     <!--endbuild-->
 </body>
+
 </html>
