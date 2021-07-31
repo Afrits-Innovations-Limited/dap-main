@@ -1,0 +1,6 @@
+dapng/settings.py
+**migrations
+**__pycache__
+.env
+db.sqlite3
+env
