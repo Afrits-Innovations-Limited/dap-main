@@ -19650,7 +19650,7 @@ a.close.disabled {
   }
   /* line 219, src/assets/scss/components/_components.header.scss */
   .navbar {
-    background: linear-gradient(75deg, #f35903, #f35903) !important;
+    background: linear-gradient(75deg, #fff, #fff) !important;
     padding: .45rem 1rem !important;
   }
   /* line 223, src/assets/scss/components/_components.header.scss */
@@ -25257,7 +25257,7 @@ button.bg-dark:focus {
 
 /* line 17, node_modules/bootstrap/scss/utilities/_background.scss */
 .bg-transparent {
-  background-color: transparent !important;
+  background-color: #fff !important;
 }
 
 /* line 7, node_modules/bootstrap/scss/utilities/_borders.scss */
