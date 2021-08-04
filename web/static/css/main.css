@@ -3385,7 +3385,7 @@ table {
 
 /* line 14, src/assets/scss/objects/_objects.background.scss */
 .primary-bg {
-  background: #6d14ae !important;
+  background: #f43903 !important;
 }
 
 /* line 17, src/assets/scss/objects/_objects.background.scss */
@@ -20108,8 +20108,8 @@ footer a {
 
 /* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
 .btn-brand-02:hover, .btn-brand-02:focus {
-  background-color: #6d14ae;
-  border-color: #6d14ae;
+  background-color: #f43903;
+  border-color: #f43903;
   color: #fff;
 }
 
@@ -20172,8 +20172,8 @@ footer a {
 
 /* line 220, src/assets/scss/components/_components.buttons.scss */
 .btn-outline-brand-02:hover, .btn-outline-brand-02:focus, .btn-outline-brand-02:active {
-  background-color: #6d14ae;
-  border-color: #6d14ae;
+  background-color: #faf0f0;
+  border-color: #faf0f0;
   color: #fff;
 }
 
