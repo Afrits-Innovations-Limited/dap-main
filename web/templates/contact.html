@@ -96,6 +96,7 @@
                 <div class="contact-us-form gray-light-bg rounded p-5">
                     <h4>Ready to get started?</h4>
                     <form action="#" method="POST" id="contactForm" class="contact-us-form">
+                        {% csrf_token %}
                         <div class="form-row">
                             <div class="col-12">
                                 <div class="form-group">

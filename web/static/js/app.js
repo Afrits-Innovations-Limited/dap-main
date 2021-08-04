@@ -1,7 +1,6 @@
 "use strict";
 
 /*
-* Apdash v1.0.0 (https://themeforest.net/user/themetags)
 * Copyright 2020 Themetags
 * Licensed under ThemeForest License
 */
@@ -236,7 +235,7 @@ jQuery(function ($) {
 
     $.ajax({
       type: "POST",
-      url: "libs/quote-form-process.php",
+      url: window.location.pathname,
       data: "name=" + name + "&email=" + email + "&message=" + message,
       success: function success(text) {
         if (text == "success") {
@@ -271,13 +270,14 @@ jQuery(function ($) {
     // Initiate Variables With Form Content
     var name = $('#contactForm input[name="name"]').val();
     var email = $('#contactForm input[name="email"]').val();
+    var token = $('#contactForm input[name="csrfmiddlewaretoken"]').val();
     var message = $('#contactForm textarea[name="message"]').val();
     $.ajax({
       type: "POST",
-      url: "libs/contact-form-process.php",
-      data: "name=" + name + "&email=" + email + "&message=" + message,
+      url: window.location.pathname,
+      data: "name=" + name + "&email=" + email + "&message=" + message + "&csrfmiddlewaretoken=" +token,
       success: function success(text) {
-        if (text == "success") {
+        if (text.success) {
           formSuccess();
         } else {
           submitMSG(false, '#contact');
@@ -294,10 +294,10 @@ jQuery(function ($) {
   function submitMSG(valid, parentSelector) {
     if (valid) {
       $(parentSelector + " .message-box").removeClass('d-none').addClass('d-block ');
-      $(parentSelector + " .message-box div").removeClass('alert-danger').addClass('alert-success').text('Form submitted successfully');
+      $(parentSelector + " .message-box div").removeClass('alert-danger').addClass('alert-success').text('Message Sent Successfully.');
     } else {
       $(parentSelector + " .message-box").removeClass('d-none').addClass('d-block ');
-      $(parentSelector + " .message-box div").removeClass('alert-success').addClass('alert-danger').text('Found error in the form. Please check again.');
+      $(parentSelector + " .message-box div").removeClass('alert-success').addClass('alert-danger').text('There was an error. Please check again.');
     }
   }
 }); // JQuery end
