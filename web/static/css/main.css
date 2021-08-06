@@ -3152,7 +3152,7 @@ table {
   z-index: 0;
   transition: opacity .3s linear;
   -webkit-transition: opacity .3s linear;
-  opacity: 0;
+  opacity: 1;
 }
 
 /* line 15, src/assets/scss/objects/_objects.background-image.scss */
