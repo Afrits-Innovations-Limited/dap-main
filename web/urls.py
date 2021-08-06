@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^dap/about-us/$', views.about, name="about"),
     url(r'^dap/contact-us/$', views.contact, name="contact"),
     url(r'^blogs/$', views.blogs, name="blogs"),
+    url(r'^privacy-policy/$', views.privacy, name="privacy"),
 ]

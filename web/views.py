@@ -50,3 +50,7 @@ def newsletter(request):
         name = email.split("@")[1]
         msg = {"success": "Okay"}
         return JsonResponse(msg)
+
+
+def privacy(request):
+    return render(request, "privacy-policy.html")
