@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!--favicon icon-->
-    <link rel="icon" href="/static/img/fav.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="/static/img/dap-logo-2.svg" type="image/png" sizes="16x16">
 
     <!--title-->
     <title>{% block title %}DAP | Payment made safer{% endblock %}</title>
@@ -21,17 +21,17 @@
     <meta property="og:url" content="https://dap.ng/">
     <meta property="og:title" content="DAP - Payment made safer">
     <meta property="og:description" content="DAP helps you send and receive payment with trust, earn and expand your business in Africa with confidence.">
-    <meta property="og:image" content="/static/img/dap-img.jpg">
+    <meta property="og:image" content="/static/img/dap-logo-2.svg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://dap.ng/">
     <meta property="twitter:title" content="DAP - Payment made safer">
     <meta property="twitter:description" content="DAP helps you send and receive payment with trust, earn and expand your business in Africa with confidence.">
-    <meta property="twitter:image" content="/static/img/dap-img.jpg">
+    <meta property="twitter:image" content="/static/img/dap-logo-2.svg">
 
     <!--build:css-->
-    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" id="stylesheet" href="/static/css/main.css">
     <!-- endbuild -->
 </head>
 
@@ -223,6 +223,13 @@
     <!--footer section end-->
 
     <!--scroll bottom to top button start-->
+    <!-- The social media icon bar -->
+<div class="icon-bar">
+    <a href="javascript:void();" onclick="toggleDark();" class="facebook"><i class="fas fa-lightbulb"></i></a>
+  </div>
+    <!--scroll bottom to top button end-->
+
+    <!--scroll bottom to top button start-->
     <div class="scroll-top scroll-to-target primary-bg text-white" data-target="html">
         <span class="fas fa-hand-point-up"></span>
     </div>
@@ -241,6 +248,16 @@
     <script src="/static/js/app.js"></script>
 
     <script>
+        if (localStorage.getItem("theme") == "dark") {
+            localStorage.setItem("theme", "dark");
+            swapStyleSheet("/static/css/dap-dark.css");
+        } else if (localStorage.getItem("theme") == "light") {
+            localStorage.setItem("theme", "light");
+            swapStyleSheet("/static/css/main.css");
+        } else {
+            localStorage.setItem("theme", "light");
+            swapStyleSheet("/static/css/main.css");
+        }
         $("#submit__newsletter").on("submit", function (e) {
             e.preventDefault();
             var email = $("#newsletter_email").val();
@@ -265,6 +282,21 @@
                 }
             });
         });
+        function swapStyleSheet(sheet) {
+            document.getElementById("stylesheet").setAttribute("href", sheet);
+        }
+        function toggleDark() {
+            if (localStorage.getItem("theme") == "light"){
+                swapStyleSheet("/static/css/dap-dark.css");
+                localStorage.setItem("theme", "dark");
+            } else if(localStorage.getItem("theme") == "dark") {
+                localStorage.setItem("theme", "light");
+                swapStyleSheet("/static/css/main.css");
+            } else {
+                localStorage.setItem("theme", "light");
+                swapStyleSheet("/static/css/main.css");
+            }
+        }
     </script>
     <!--endbuild-->
 </body>
