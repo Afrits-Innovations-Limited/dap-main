@@ -1250,6 +1250,7 @@ html { filter: contrast(100%) brightness(100%) saturate(100%); }.NIGHTEYE_Filter
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  z-index: 9999999999999;
 }
 
 /* Style the icon bar links */
@@ -1258,16 +1259,17 @@ html { filter: contrast(100%) brightness(100%) saturate(100%); }.NIGHTEYE_Filter
   text-align: center;
   padding: 10px;
   transition: all 0.3s ease;
-  color: white;
+  color: #1c1c21;
   font-size: 20px;
 }
 
 /* Style the social media icons with color, if you want */
 .icon-bar a:hover {
-  background-color: #f43903;
+  background-color: #2f2f36;
+  color: #fff;
 }
 
-.facebook {
-  background: #f57a35;
-  color: white;
+.switch-mode {
+  background: #fff;
+  color: #1c1c21;
 }

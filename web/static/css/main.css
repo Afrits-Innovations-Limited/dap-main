@@ -19406,6 +19406,7 @@ a.close.disabled {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  z-index: 9999999999999;
 }
 
 /* Style the icon bar links */
@@ -19423,7 +19424,7 @@ a.close.disabled {
   background-color: #f43903;
 }
 
-.facebook {
+.switch-mode {
   background: #f57a35;
   color: white;
 }
