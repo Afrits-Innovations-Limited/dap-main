@@ -5,7 +5,7 @@
     var imageDir = '/static/img/';
     // set number of seconds delay
     // list image names
-    var images = ['group15.png', 'group15-dark.png'];
+    var images = ['group15.png', 'group15-dark.png', '10.png'];
 
     // don't change below this line
     var num = 0;
