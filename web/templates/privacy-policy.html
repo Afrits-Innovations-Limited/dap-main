@@ -1,5 +1,33 @@
 {% extends 'app.html' %}
 {% block title %}Privacy Policy - DAP | Payment made safer{% endblock %}
+{% block meta %}
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Privacy Policy - DAP | Payment made safer">
+    <meta name="description" content="DAP helps you send and receive payment with trust, earn and expand your business in Africa with confidence.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ request.path }}">
+    <meta property="og:title" content="Privacy Policy - DAP | Payment made safer">
+    <meta property="og:description" content="DAP helps you send and receive payment with trust, earn and expand your business in Africa with confidence.">
+    <meta property="og:image" content="/static/img/dap-logo-2.svg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ request.path }}">
+    <meta property="twitter:title" content="Privacy Policy - DAP | Payment made safer">
+    <meta property="twitter:description" content="DAP helps you send and receive payment with trust, earn and expand your business in Africa with confidence.">
+    <meta property="twitter:image" content="/static/img/dap-logo-2.svg">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N3Z6WXZ1J8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N3Z6WXZ1J8');
+    </script>
+    {% endblock %}
 {% block body %}
 <!--page header section start-->
 <section class="page-header-section ptb-100 bg-image" image-overlay="7">

@@ -1,5 +1,33 @@
 {% extends 'app.html' %}
 {% block title %}About Us - DAP | Payment made safer{% endblock %}
+{% block meta %}
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="About Us - DAP | Payment made safer">
+    <meta name="description" content="DAP helps you send and receive payment with trust, earn and expand your business in Africa with confidence.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ request.path }}">
+    <meta property="og:title" content="About Us - DAP | Payment made safer">
+    <meta property="og:description" content="DAP helps you send and receive payment with trust, earn and expand your business in Africa with confidence.">
+    <meta property="og:image" content="/static/img/dap-logo-2.svg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ request.path }}">
+    <meta property="twitter:title" content="About Us - DAP | Payment made safer">
+    <meta property="twitter:description" content="DAP helps you send and receive payment with trust, earn and expand your business in Africa with confidence.">
+    <meta property="twitter:image" content="/static/img/dap-logo-2.svg">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N3Z6WXZ1J8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N3Z6WXZ1J8');
+    </script>
+    {% endblock %}
 {% block body %}
 <!--page header section start-->
 <section class="page-header-section ptb-100 bg-image" image-overlay="7">
@@ -47,7 +75,12 @@
                 <div class="col-md-12 col-lg-6">
                     <div class="feature-contents section-heading">
                         <h2>Building DAP (Delivered as Promised) for Africa</h2>
-                        <p>DAP is a technology built to restore trust, enhancing digital experience, and accelerating African’s transition to secured digital financing. Our payment gateway makes it possible for businesses to transact confidently without fear of financial...</p>
+                        <p>
+                            DAP is a technology built to restore trust, enhance digital experience, and accelerate Africa’s transition to secured digital financing.  We are creating an ecosystem where buyers can make purchases from absolute strangers with confidence, a seller/service provider can sell/provide services with the assurance that they will surely get paid.
+                        </p>
+                            <p class="text-dark">
+                            Our payment gateway makes it possible for businesses to transact confidently without fear of financial …..
+                        </p>
                         
                     </div>
                 </div>
@@ -68,7 +101,26 @@
     <!--about us section end-->
 </div>
 <!--about us section end-->
-<!--about us section end-->
+
+<section class="review-section ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="single-review-wrap p-4 my-3">
+                    <div class="review-top d-flex align-items-center justify-content-between mb-2">
+                        <span><i class="fas fa-quote-left icon-size-sm color-secondary"></i></span>
+                    </div>
+                    <div class="review-body">
+                        <h5>Our Story</h5>
+                        <p class="text-center">
+                            DAP was started in (year) by 4 friends, to tackle the problem of “what I ordered vs What I got”. This is a prevalent problem in the digital transaction space. We decided to solve this problem by helping businesses DAP (Deliver As promised), by building into our fintech technology an escrow management system that secures buyers and sellers and bringing back trust in the E-commerce space. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <!--video section with counter start-->
@@ -81,9 +133,9 @@
                         <span><i class="fas fa-quote-left icon-size-sm color-secondary"></i></span>
                     </div>
                     <div class="review-body">
-                        <h5>Our Story</h5>
+                        <h5>Our Vision</h5>
                         <p>
-                            DAP was started in (year) by 4 friends, to tackle the problem of “what I ordered vs What I got”. This is a prevalent problem in the digital transaction space. We decided to solve this problem by helping businesses DAP (Deliver As promised), by building into our fintech technology an escrow management system that secures buyers and sellers and bringing back trust in the E-commerce space. 
+                            DAP vision is to enhance digital experience and accelerate African’s transition to secured financing.
                         </p>
                     </div>
                 </div>
@@ -107,7 +159,7 @@
                         <span><i class="fas fa-quote-left icon-size-sm color-secondary"></i></span>
                     </div>
                     <div class="review-body">
-                        <h5>Our Vision</h5>
+                        <h5>Our Values</h5>
                         <p>
                             DAP vision is to enhance digital experience and accelerate African’s transition to secured financing.
                         </p>
