@@ -54,3 +54,6 @@ def newsletter(request):
 
 def privacy(request):
     return render(request, "privacy-policy.html")
+
+def terms(request):
+    return render(request, "terms.html")

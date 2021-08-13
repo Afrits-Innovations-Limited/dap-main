@@ -16,5 +16,6 @@ urlpatterns = [
     url(r'^dap/contact-us/$', views.contact, name="contact"),
     url(r'^blogs/$', views.blogs, name="blogs"),
     url(r'^privacy-policy/$', views.privacy, name="privacy"),
+    url(r'^terms-and-conditions/$', views.terms, name="terms"),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 ]

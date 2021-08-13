@@ -15,29 +15,32 @@
     {% block meta %}
     <!-- Primary Meta Tags -->
     <meta name="title" content="DAP - Payment made safer">
-    <meta name="description" content="DAP helps you send and receive payment with trust, earn and expand your business in Africa with confidence.">
+    <meta name="description"
+        content="DAP helps you send and receive payment with trust, earn and expand your business in Africa with confidence.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dap.ng/">
     <meta property="og:title" content="DAP - Payment made safer">
-    <meta property="og:description" content="DAP helps you send and receive payment with trust, earn and expand your business in Africa with confidence.">
+    <meta property="og:description"
+        content="DAP helps you send and receive payment with trust, earn and expand your business in Africa with confidence.">
     <meta property="og:image" content="/static/img/dap-logo-2.svg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://dap.ng/">
     <meta property="twitter:title" content="DAP - Payment made safer">
-    <meta property="twitter:description" content="DAP helps you send and receive payment with trust, earn and expand your business in Africa with confidence.">
+    <meta property="twitter:description"
+        content="DAP helps you send and receive payment with trust, earn and expand your business in Africa with confidence.">
     <meta property="twitter:image" content="/static/img/dap-logo-2.svg">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N3Z6WXZ1J8"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-N3Z6WXZ1J8');
+        gtag('config', 'G-N3Z6WXZ1J8');
     </script>
     {% endblock %}
 
@@ -221,9 +224,10 @@
                 <div class="col-md-6 col-lg-5">
                     <div class="terms-policy-wrap text-lg-right text-md-right text-left">
                         <ul class="list-inline">
-                            <li class="list-inline-item"><a class="small-text" href="#">Terms & Condition</a></li>
+                            <li class="list-inline-item"><a class="small-text" href="{% url 'terms' %}">Terms & Condition</a></li>
                             <li class="list-inline-item"><a class="small-text" href="#">Security</a></li>
-                            <li class="list-inline-item"><a class="small-text" href="{% url 'privacy' %}">Privacy Policy</a></li>
+                            <li class="list-inline-item"><a class="small-text" href="{% url 'privacy' %}">Privacy
+                                    Policy</a></li>
                         </ul>
                     </div>
                 </div>
@@ -235,9 +239,9 @@
 
     <!--scroll bottom to top button start-->
     <!-- The social media icon bar -->
-<div class="icon-bar">
-    <a href="javascript:void();" onclick="toggleDark();" class="switch-mode"><i class="fas fa-lightbulb"></i></a>
-  </div>
+    <div class="icon-bar">
+        <a href="javascript:void();" onclick="toggleDark();" class="switch-mode"><i class="fas fa-lightbulb"></i></a>
+    </div>
     <!--scroll bottom to top button end-->
 
     <!--scroll bottom to top button start-->
@@ -298,10 +302,10 @@
             document.getElementById("stylesheet").setAttribute("href", sheet);
         }
         function toggleDark() {
-            if (localStorage.getItem("theme") == "light"){
+            if (localStorage.getItem("theme") == "light") {
                 swapStyleSheet("/static/css/dap-dark.css");
                 localStorage.setItem("theme", "dark");
-            } else if(localStorage.getItem("theme") == "dark") {
+            } else if (localStorage.getItem("theme") == "dark") {
                 localStorage.setItem("theme", "light");
                 swapStyleSheet("/static/css/main.css");
             } else {
