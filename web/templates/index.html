@@ -40,8 +40,7 @@
             <div class="col-md-12 col-lg-6">
                 <div class="section-heading text-dark py-5">
                     <h1 class="text-black font-weight-bold">Complete your transactions with confidence</h1>
-                    <p>DAP helps you send and receive payment with trust, earn and expand your business in Africa with
-                        confidence.</p>
+                    <p>DAP helps you easily send and receive payment with confidence, increase your earnings and expand your business.</p>
                     <div class="action-btns mt-4">
                         <ul class="list-inline">
                             <li class="list-inline-item">
@@ -96,7 +95,7 @@
         <div class="row">
             <div class="col-lg-7 col-md-10">
                 <div class="section-heading">
-                    <h2>Do more with DAP everyday</h2>
+                    <h2>Why use DAP?</h2>
                     <p>One stop application for all your digital transactions. </p>
                 </div>
             </div>
@@ -109,9 +108,8 @@
                             <span class="fas fa-money-bill icon-size-md color-secondary"></span>
                         </div>
                         <div class="pt-2 pb-3">
-                            <h5>Send Money</h5>
-                            <p class="mb-0">Send money instantly to anyone with a phone number, email address or
-                                directly to their bank account.</p>
+                            <h5>DAP wallet</h5>
+                            <p class="mb-0">Safe and easy transactions via phone, email and QR code</p>
                         </div>
                     </div>
                 </div>
@@ -123,23 +121,8 @@
                             <span class="fas fa-exchange-alt icon-size-md color-secondary"></span>
                         </div>
                         <div class="pt-2 pb-3">
-                            <h5>Request & Receive</h5>
-                            <p class="mb-0">Request and receive money instantly from anyone with a phone number or email
-                                address.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card border-0 single-promo-card single-promo-hover-2 p-2 mt-4">
-                    <div class="card-body">
-                        <div class="pb-2">
-                            <span class="fas fa-sync-alt icon-size-md color-secondary"></span>
-                        </div>
-                        <div class="pt-2 pb-3">
-                            <h5>Bills & Top-ups</h5>
-                            <p class="mb-0">Renew your Electricity , Internet, Pay TV and Top up your airtime and data
-                                easily with DAP bill services.</p>
+                            <h5>DAP Artisan</h5>
+                            <p class="mb-0">Discover, connect, work and rate service providers around you</p>
                         </div>
                     </div>
                 </div>
@@ -151,8 +134,21 @@
                             <span class="fas fa-cart-plus icon-size-md color-secondary"></span>
                         </div>
                         <div class="pt-2 pb-3">
-                            <h5>Sell you products</h5>
-                            <p class="mb-0">Own a store and reach more customers using DAP mall.</p>
+                            <h5>DAP MALL</h5>
+                            <p class="mb-0">Shop with peace of mind</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card border-0 single-promo-card single-promo-hover-2 p-2 mt-4">
+                    <div class="card-body">
+                        <div class="pb-2">
+                            <span class="fas fa-cart-plus icon-size-md color-secondary"></span>
+                        </div>
+                        <div class="pt-2 pb-3">
+                            <h5>DAP Plugins</h5>
+                            <p class="mb-0">Process all payment on your platform using DAP API</p>
                         </div>
                     </div>
                 </div>
@@ -388,6 +384,55 @@
     </div>
 </section>
 
+
+{% if display_partners == True %}
+<!--our team section start-->
+<section class="client-section  ptb-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="section-heading text-center mb-5">
+                    <h2>Our Valuable Customers</h2>
+                    <p>
+                        Rapidiously morph transparent internal or sources whereas resource sucking e-business. Conveniently innovate compelling internal.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-12">
+                <div class="owl-carousel owl-theme clients-carousel dot-indicator">
+                    <div class="item single-customer">
+                        <img src="/static/img/customers/clients-logo-01.png" alt="client logo" class="customer-logo">
+                    </div>
+                    <div class="item single-customer">
+                        <img src="/static/img/customers/clients-logo-02.png" alt="client logo" class="customer-logo">
+                    </div>
+                    <div class="item single-customer">
+                        <img src="/static/img/customers/clients-logo-03.png" alt="client logo" class="customer-logo">
+                    </div>
+                    <div class="item single-customer">
+                        <img src="/static/img/customers/clients-logo-04.png" alt="client logo" class="customer-logo">
+                    </div>
+                    <div class="item single-customer">
+                        <img src="/static/img/customers/clients-logo-05.png" alt="client logo" class="customer-logo">
+                    </div>
+                    <div class="item single-customer">
+                        <img src="/static/img/customers/clients-logo-06.png" alt="client logo" class="customer-logo">
+                    </div>
+                    <div class="item single-customer">
+                        <img src="/static/img/customers/clients-logo-07.png" alt="client logo" class="customer-logo">
+                    </div>
+                    <div class="item single-customer">
+                        <img src="/static/img/customers/clients-logo-08.png" alt="client logo" class="customer-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--our team section end-->
+{% endif %}
 
 <!--screenshots section end-->
 {% endblock %}

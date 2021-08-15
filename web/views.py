@@ -2,10 +2,17 @@ from web.models import Contact
 from django.http.response import JsonResponse
 from django.shortcuts import render
 from django.core.mail import send_mail, BadHeaderError
-
+from django.conf import settings
+import json
 
 def home(request):
-    return render(request, "index.html")
+    config_file = settings.BASE_DIR / "config.json"
+    read_file = open(config_file)
+    config = json.load(read_file)
+    context = {
+        "display_partners": config['display_partners']
+    }
+    return render(request, "index.html", context)
 
 
 def teams(request):
