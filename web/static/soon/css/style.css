@@ -187,7 +187,7 @@ Navbar CSS
   margin-left: auto;
   width: 45px;
   height: 45px;
-  border: 1px solid #ffffff;
+  border: 1px solid #ee3803;
   border-radius: 50%;
   padding-top: 13px;
   padding-right: 10px;
@@ -199,7 +199,7 @@ Navbar CSS
   display: block;
   width: 20px;
   height: 2px;
-  background: #ffffff;
+  background: #ee3803;
   border-radius: 5px;
   margin-bottom: 3px;
   margin-left: auto;
@@ -347,7 +347,9 @@ Main Banner CSS
 .main-banner-content .newsletter-form .input-newsletter::placeholder {
   color: #666666;
 }
-
+.img-fluid {
+  max-height: 500px !important;
+}
 .main-banner-content .newsletter-form button {
   position: absolute;
   right: 0;
@@ -433,7 +435,7 @@ Footer CSS
   display: inline-block;
   width: 30px;
   height: 30px;
-  color: #7c5191;
+  color: #e7651c;
   border-radius: 50%;
   background-color: transparent;
   text-align: center;

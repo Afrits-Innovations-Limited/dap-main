@@ -27,9 +27,6 @@ def teams(request):
     return render(request, "teams.html")
 
 def faqs(request):
-    user_ip = request.META["REMOTE_ADDR"]
-    if ip_check(user_ip) == False:
-        return render(request, "soon.html")
     return render(request, "faqs.html")
 
 def about(request):
