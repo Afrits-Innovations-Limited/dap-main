@@ -8,9 +8,7 @@ import json
 
 
 def home(request):
-    user_ip = request.META["REMOTE_ADDR"]
-    if ip_check(user_ip) == False:
-        return render(request, "soon.html")
+    
     config_file = settings.BASE_DIR / "config.json"
     read_file = open(config_file)
     config = json.load(read_file)
@@ -21,18 +19,14 @@ def home(request):
 
 
 def teams(request):
-    user_ip = request.META["REMOTE_ADDR"]
-    if ip_check(user_ip) == False:
-        return render(request, "soon.html")
+    
     return render(request, "teams.html")
 
 def faqs(request):
     return render(request, "faqs.html")
 
 def about(request):
-    user_ip = request.META["REMOTE_ADDR"]
-    if ip_check(user_ip) == False:
-        return render(request, "soon.html")
+    
     return render(request, "about-us.html")
 
 def contact(request):
@@ -54,22 +48,16 @@ def contact(request):
         except BadHeaderError:
             msg = {"error": "Invalid header found."}
         return JsonResponse(msg)
-    user_ip = request.META["REMOTE_ADDR"]
-    if ip_check(user_ip) == False:
-        return render(request, "soon.html")
+    
     else:
         return render(request, "contact.html")
 
 def blogs(request):
-    user_ip = request.META["REMOTE_ADDR"]
-    if ip_check(user_ip) == False:
-        return render(request, "soon.html")
+    
     return render(request, "blogs.html")
 
 def single_blog(request, slug):
-    user_ip = request.META["REMOTE_ADDR"]
-    if ip_check(user_ip) == False:
-        return render(request, "soon.html")
+    
     return render(request, "blog_single.html")
 
 def newsletter(request):
@@ -81,15 +69,11 @@ def newsletter(request):
 
 
 def privacy(request):
-    user_ip = request.META["REMOTE_ADDR"]
-    if ip_check(user_ip) == False:
-        return render(request, "soon.html")
+    
     return render(request, "privacy-policy.html")
 
 def terms(request):
-    user_ip = request.META["REMOTE_ADDR"]
-    if ip_check(user_ip) == False:
-        return render(request, "soon.html")
+    
     return render(request, "terms.html")
 
 
