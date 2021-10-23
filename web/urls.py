@@ -21,4 +21,8 @@ urlpatterns = [
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     url(r'^robots\.txt$', TemplateView.as_view(template_name="robots.txt", content_type='text/plain')),
     url(r'^downloads/$', views.downloads, name="download"),
+    url(r'^.well-known/apple-app-site-association/$', views.apple_site_association),
+    url(r'^.apple-app-site-association/$', views.apple_site_association),
+
+    
 ]

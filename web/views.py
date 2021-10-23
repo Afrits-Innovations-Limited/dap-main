@@ -82,3 +82,6 @@ def error_404(request, exception):
 
 def downloads(request):
     return render(request, "download.html")
+
+def apple_site_association(request):
+    return render(request, "apple-app-site-association")
