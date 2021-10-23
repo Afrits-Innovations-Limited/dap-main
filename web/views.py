@@ -1,6 +1,6 @@
 from web.ext import ip_check
 from web.models import Contact
-from django.http.response import HttpResponse, JsonResponse
+from django.http.response import JsonResponse
 from django.shortcuts import render
 from django.core.mail import send_mail, BadHeaderError
 from django.conf import settings
@@ -82,19 +82,3 @@ def error_404(request, exception):
 
 def downloads(request):
     return render(request, "download.html")
-
-def apple_site_association(request):
-    response = HttpResponse({
-        "applinks": {
-            "apps": [],
-            "details": [
-                {
-                    "appID": "727PCR9NP3.ng.dap.dap",
-                    "paths": [ "*" ]
-                }
-            ]
-        }
-    }, 
-    content_type='application/json')
-    response['Content-Disposition'] = 'attachment; filename="apple-app-site-association"'
-    return response
