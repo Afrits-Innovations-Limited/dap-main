@@ -20,7 +20,6 @@ urlpatterns = [
     url(r'^terms-and-conditions/$', views.terms, name="terms"),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     url(r'^robots\.txt$', TemplateView.as_view(template_name="robots.txt", content_type='text/plain')),
-    url(r'^downloads/$', views.downloads, name="download"),
     url(r'^apple-app-site-association$', TemplateView.as_view(template_name="apple-app-site-association", content_type='application/json')),
     url(r'^.well-known/apple-app-site-association$', TemplateView.as_view(template_name="apple-app-site-association", content_type='application/json')),
 
